@@ -1,16 +1,21 @@
-import logo from './assets/img/logo.png';
+import React from 'react';
 import './App.css';
-import App_presentation from './components/App_presentation';
+import Home from './pages/Home';
+import Tree from './pages/Tree';
+import NotFound from './pages/NotFound';
 
-function App() {
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <App_presentation />
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/tree" element={<Tree />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
