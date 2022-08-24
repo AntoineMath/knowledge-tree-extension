@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-import App_presentation from '../components/App_presentation';
+import AppPresentation from '../components/AppPresentation';
 import Logo from '../components/Logo';
 
 const Home = () => {
@@ -8,7 +8,7 @@ const Home = () => {
     <div>
       <Logo />
       <Navigation />
-      <App_presentation />
+      <AppPresentation />
     </div>
   );
 };
